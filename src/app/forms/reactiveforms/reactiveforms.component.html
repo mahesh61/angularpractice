@@ -1,0 +1,14 @@
+<div class="">
+    <form action="" [formGroup]="formObject" (ngSubmit)="saveData()" class="forms">
+        <input type="text" placeholder="first name" formControlName="fname" name="fname">
+        <input type="text" placeholder="last name" formControlName="sname" name="sname">
+        <input type="email" placeholder="email id.." formControlName="email" name="emalId">
+        <input type="password" placeholder="enter password" formControlName="passwd" name="passworde">
+
+        <input type="password" placeholder="re enter password">
+        <input type="text" placeholder="mobile number" formControlName="mobile" name="mobno">
+        <input type="text" placeholder="pincode" formControlName="pincode" name="pincode">
+
+        <input type="submit" value="Send">
+    </form>
+</div>

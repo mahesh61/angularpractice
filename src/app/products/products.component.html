@@ -1,0 +1,26 @@
+<div ngClass="header">
+    <div ngClass="headerContainer">
+        <div ngClass="headerList">
+            <div ngClass="{{headerListItem}} {{activeContact}}">
+                <span [routerLink]="['5']">Stays</span>
+            </div>
+            <div ngClass="{{headerListItem}} {{activeContact}}">
+
+                <span [routerLink]="['2']">Flights</span>
+            </div>
+            <div ngClass="{{headerListItem}} {{activeContact}} ">
+
+                <span [routerLink]="['4']">Car Rentals</span>
+            </div>
+            <div ngClass="{{headerListItem}} {{activeContact}} ">
+
+                <span [routerLink]="['7']">Attractions</span>
+            </div>
+            <div ngClass="{{headerListItem}} {{activeContact}} ">
+
+                <span [routerLink]="['2']">Airport Taxi</span>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

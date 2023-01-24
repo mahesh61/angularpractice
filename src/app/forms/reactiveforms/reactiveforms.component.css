@@ -1,0 +1,23 @@
+.forms {
+    height: 100vh;
+    width: 200px;
+    gap: 20px;
+    position: absolute;
+    left: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.forms>input {
+    height: 30px;
+    outline: none;
+}
+
+.forms>input:nth-of-type(8) {
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    color: green;
+    font-size: 18px;
+}

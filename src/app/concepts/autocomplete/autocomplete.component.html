@@ -1,0 +1,14 @@
+<p>autocomplete works!</p>
+<div class="autocomplete">
+    <ng-autocomplete class="xcd" [data]="data" [searchKeyword]="keyword" placeholder="Select country" [itemTemplate]="itemTemplate" [notFoundTemplate]="notFoundTemplate" (selected)="selectedEnvet($event)" (inputChanged)="onChangeSearch($event)" (inputFocused)="onFocused($event)">
+
+    </ng-autocomplete>
+
+    <ng-template #itemTemplate let-item>
+        <a [innerHTML]="item.name"></a>
+    </ng-template>
+
+    <ng-template #notFoundTemplate let-notFound>
+        <div [innerHTML]="notFound"></div>
+    </ng-template>
+</div>

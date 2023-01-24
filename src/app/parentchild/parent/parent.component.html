@@ -1,0 +1,7 @@
+<div [ngClass]="'parent'">
+    <button (click)="sendData('formfjksjfkasd')">Sent Data to children</button>
+    <span>Data from childeren: {{childmessage}}</span>
+    <div>
+        <app-children [parentData]="message" (childata)="receiceDtatfromChild($event)"></app-children>
+    </div>
+</div>

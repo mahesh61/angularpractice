@@ -1,0 +1,48 @@
+<div ngClass="container">
+    <form ngClass="content" #contactInfo="ngForm" (ngSubmit)="getFornData(contactInfo) " novalidate>
+        <div ngClass="formInputs">
+            <label> First Name</label>
+            <input type="text" name="fName" #firstname="ngModel" pattern="^[a-zA-Z]+$" [(ngModel)]="contactObj.firstname" ngModel>
+            <div *ngIf="!firstname?.valid && (firstname?.dirty || firstname?.touched)">
+                Invalid First Name
+            </div>
+        </div>
+        <div ngClass="formInputs">
+            <label> Last Name</label>
+            <input type="text" name="lName" [(ngModel)]="contactObj.lastname" ngModel>
+        </div>
+        <div ngClass="formInputs">
+            <label> Email Id</label>
+            <input type="email" name="emailId" [(ngModel)]="contactObj.email" ngModel>
+        </div>
+        <div ngClass="formInputs">
+            <label> Mobile Number</label>
+            <input type="text" minlength="10" maxlength="10" name="mobileNo" [(ngModel)]="contactObj.mobile" ngModel>
+        </div>
+        <div ngClass="content" ngModelGroup="address">
+            <div ngClass="formInputs">
+                <label> City</label>
+                <input type="text" name="city" [(ngModel)]="contactObj.address.city" ngModel>
+            </div>
+            <div ngClass="formInputs">
+                <label> country</label>
+                <input type="text" name="country" [(ngModel)]="contactObj.country" ngModel>
+            </div>
+            <div ngClass="formInputs">
+                <label> Pincode</label>
+                <input type="text" name="pinCode" [(ngModel)]="contactObj.address.pincode" ngModel>
+            </div>
+            <div ngClass="formInputs">
+                <label> State</label>
+                <input type="text" name="state" [(ngModel)]="contactObj.address.street" ngModel>
+            </div>
+        </div>
+        <div ngClass=" formInputs ">
+            <button type="submit " [disabled]="!contactInfo.valid">Submit</button>
+            <button (click)="reset(contactInfo)">Submit</button>
+        </div>
+    </form>
+
+</div>
+
+<app-child [dataFromParent]="contactObj.firstname" (ItemEvent)="receive($event)"></app-child>

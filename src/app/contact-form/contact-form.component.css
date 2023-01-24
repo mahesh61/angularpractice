@@ -1,0 +1,50 @@
+.container {
+    top: 50%;
+    width: 400px;
+    margin: auto;
+    padding: 5px 0px;
+    display: flex;
+    justify-content: center;
+    background-color: grey;
+    border: 1px solid grey;
+    color: white;
+    font-size: 15px;
+    font-family: sans-serif;
+    font-weight: 400;
+    border-radius: 5px;
+}
+
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.formInputs {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.formInputs>input {
+    width: 300px;
+    height: 30px;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+}
+
+.formInputs>button {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    background-color: #007;
+    border-radius: 2px;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}

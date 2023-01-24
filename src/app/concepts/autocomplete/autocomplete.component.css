@@ -1,0 +1,12 @@
+ .autocomplete {
+     width: 220px;
+ }
+ 
+ .xcd {
+     background: gray;
+     background-color: aqua;
+ }
+ 
+ .autocomplete::-webkit-scrollbar {
+     display: none;
+ }

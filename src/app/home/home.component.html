@@ -1,0 +1,14 @@
+<div ngClass="navBar">
+    <div ngClass="navContainer">
+        <div ngClass="logo">AllineBookings.com</div>
+        <div ngClass={{activeProcucts}} (click)="handleClick('products')"> Products</div>
+        <div ngClass={{activeContact}} (click)="handleClick('contact')">contact</div>
+        <div ngClass={{activeAbout}} (click)="handleClick('About')">About us</div>
+        <a [routerLink]="['/About','67']" [queryParams]="{page:2}" [state]="{name:'mskajd',id:928,role:'developer'}" queryParamsHandling="preserve">About us</a>
+        <div ngClass="navbar-items">
+            <button (click)="logIn()" ngClass="navButton"> Login</button>
+            <button (click)="logOut()" ngClass="navButton">Logout </button>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>

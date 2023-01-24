@@ -1,0 +1,14 @@
+<div class="">
+    <form action="" #regestrationForm="ngForm" (ngSubmit)="save(regestrationForm)" class="forms">
+        <input type="text" placeholder="first name" name="fname" ngModel [(ngModel)]="DefaultData.name">
+        <input type="text" placeholder="last name" name="sname" ngModel [(ngModel)]="DefaultData.sname">
+        <input type="email" placeholder="email id.." name="emalId" ngModel [(ngModel)]="DefaultData.email">
+        <input type="password" placeholder="enter password" name="passworde" ngModel [ngStyle]="{'border': '1px solid red' }" name="repasswd" [(ngModel)]="DefaultData.password">
+
+        <input type="password" placeholder="re enter password" ngModel>
+        <input type="text" placeholder="mobile number" name="mobno" ngModel [(ngModel)]="DefaultData.mobile">
+        <input type="text" placeholder="pincode" #pincode="ngModel" name="pincode" [(ngModel)]="DefaultData.pincode" required pattern="^[1-9][0-9]{5}$" ngModel>
+        <span [ngStyle]="{'font-size':'12px','maring':'0px'}" *ngIf="!pincode.valid && (pincode.touched ||pincode.dirty)">{{pincode.valid    }}</span>
+        <input type="submit" [disabled]="!regestrationForm.valid" value="Send">
+    </form>
+</div>
